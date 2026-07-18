@@ -14,12 +14,12 @@ public:
 			seclarge = large;
 			large = nums[i];
 		}
-		else if(nums[i]>seclarge){
+		else if(nums[i]>seclarge && nums[i]!=large){
 			thlarge = seclarge;
 			seclarge = nums[i];
 		}
 		else{ 
-			if(nums[i]>thlarge){
+			if(nums[i]>thlarge && nums[i]!=seclarge){
 				thlarge = nums[i];
                 // cout<<thlarge;
 			}
