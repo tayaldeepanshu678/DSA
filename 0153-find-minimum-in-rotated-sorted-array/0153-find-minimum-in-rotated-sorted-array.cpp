@@ -5,7 +5,7 @@ public:
         int high = nums.size()-1;
         int minimum = INT_MAX;
         while(low<=high){
-            int mid = (low+high)/2;
+            int mid = low + (high-low)/2;
             if(nums[low]<=nums[high]){
                 minimum = min(minimum, nums[low]);
                 break;
