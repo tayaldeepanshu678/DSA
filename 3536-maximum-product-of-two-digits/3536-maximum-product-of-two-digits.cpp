@@ -13,8 +13,6 @@ public:
                 product = max(product, ans[i]*ans[j]);
             }
         }
-        // sort(ans.begin(),ans.end());
-        // return ans[ans.size()-1]*ans[ans.size()-2];
         return product;
     }
 };
