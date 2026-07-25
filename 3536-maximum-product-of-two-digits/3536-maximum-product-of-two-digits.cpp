@@ -8,11 +8,13 @@ public:
             ans.push_back(digit);
             n/=10;
         }
-        for(int i = 0; i<ans.size(); i++){
-            for(int j = i+1; j<ans.size(); j++){
-                product = max(product, ans[i]*ans[j]);
-            }
-        }
-        return product;
+        // for(int i = 0; i<ans.size(); i++){
+        //     for(int j = i+1; j<ans.size(); j++){
+        //         product = max(product, ans[i]*ans[j]);
+        //     }
+        // }
+        sort(ans.begin(),ans.end());
+        return ans[ans.size()-1]*ans[ans.size()-2];
+        // return product;
     }
 };
