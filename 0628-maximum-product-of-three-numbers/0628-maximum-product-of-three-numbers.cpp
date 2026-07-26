@@ -2,9 +2,10 @@ class Solution {
 public:
     int maximumProduct(vector<int>& nums) {
         int product=1;
+        int n = nums.size();
         sort(nums.begin(),nums.end());
         if(nums[0]>=0){ 
-            return nums[nums.size()-1]*nums[nums.size()-2]*nums[nums.size()-3];
+            return nums[n-1]*nums[n-2]*nums[n-3];
         }
         if(nums.size()==3){
             return nums[0]*nums[1]*nums[2];
@@ -26,13 +27,9 @@ public:
             //     }
             // }
         }
-        int exm2 = nums[nums.size()-1]*nums[nums.size()-2]*nums[nums.size()-3];
-        int exm1 = nums[nums.size()-1]*product;
+        int exm2 = nums[n-1]*nums[n-2]*nums[n-3];
+        int exm1 = nums[n-1]*product;
 
-        // int exm1 = INT_MIN;
-        // if(cnt==2){ 
-        //    exm1 = product*nums[nums.size()-1];
-        // }
         return max(exm1,exm2);
     }
 };
