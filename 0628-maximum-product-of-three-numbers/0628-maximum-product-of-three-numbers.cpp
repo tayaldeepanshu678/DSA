@@ -7,7 +7,7 @@ public:
             return nums[nums.size()-1]*nums[nums.size()-2]*nums[nums.size()-3];
         }
         if(nums.size()==3){
-            return nums[nums.size()-1]*nums[nums.size()-2]*nums[nums.size()-3];
+            return nums[0]*nums[1]*nums[2];
         }
         int cnt = 0;
         for(int i = 0; i<nums.size()-1; i++){
@@ -27,11 +27,12 @@ public:
             // }
         }
         int exm2 = nums[nums.size()-1]*nums[nums.size()-2]*nums[nums.size()-3];
+        int exm1 = nums[nums.size()-1]*product;
 
-        int exm1 = INT_MIN;
-        if(cnt==2){ 
-           exm1 = product*nums[nums.size()-1];
-        }
+        // int exm1 = INT_MIN;
+        // if(cnt==2){ 
+        //    exm1 = product*nums[nums.size()-1];
+        // }
         return max(exm1,exm2);
     }
 };
