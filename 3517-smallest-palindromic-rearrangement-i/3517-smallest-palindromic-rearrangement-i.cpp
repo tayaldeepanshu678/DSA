@@ -7,7 +7,7 @@ public:
         string str = "";
         char mid;
         if(s.size()%2!=0){
-            mid = s[(s.size()/2)];
+            mid = s[s.size()/2];
         }
         for(int i = 0; i<s.size()/2; i++){
             str.push_back(s[i]);
@@ -17,8 +17,7 @@ public:
         reverse(rev.begin(),rev.end());
         // str+=rev;
         if(s.size()%2!=0){
-           string gtr =  str + mid + rev;
-           return gtr;
+            return str + mid + rev;
         }
         return str + rev;
     }
