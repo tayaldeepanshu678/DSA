@@ -4,17 +4,22 @@ public:
         vector<int>ans;
         // auto mini = *min_element(nums.begin(),nums.end());
         // auto maxi = *max_element(nums.begin(),nums.end());
-        sort(nums.begin(),nums.end());
-        unordered_map<int,int>mpp;
+        // sort(nums.begin(),nums.end());
+        // unordered_map<int,int>mpp;
+        unordered_set<int>st;
         int mini = INT_MAX;
         int maxi = INT_MIN;
         for(int x : nums){
+            st.insert(x);
             mini = min(mini,x);
             maxi = max(maxi,x);
-            mpp[x]++;
+            // mpp[x]++;
         }
         for(int x = mini; x<=maxi; x++){
-            if(mpp[x]==0){
+            // if(mpp[x]==0){
+            //     ans.push_back(x);
+            // }
+            if(st.find(x)==st.end()){
                 ans.push_back(x);
             }
         }
